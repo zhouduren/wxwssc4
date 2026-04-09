@@ -1,0 +1,21 @@
+.tabs {
+  white-space: nowrap;
+  margin-bottom: 12rpx;
+}
+
+.tab {
+  display: inline-block;
+  background: #fff;
+  border-radius: 22rpx;
+  margin-right: 8rpx;
+  padding: 10rpx 20rpx;
+}
+
+.active {
+  background: #fa8c16;
+  color: #fff;
+}
+
+.mt {
+  margin-top: 10rpx;
+}

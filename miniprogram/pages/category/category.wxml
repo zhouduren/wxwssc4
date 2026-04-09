@@ -1,0 +1,27 @@
+<view class="layout">
+  <view class="left">
+    <view
+      wx:for="{{categories}}"
+      wx:key="*this"
+      class="cate {{activeCategory===item?'active':''}}"
+      data-category="{{item}}"
+      bindtap="onSwitch"
+    >{{item}}</view>
+  </view>
+  <view class="right">
+    <view class="goods" wx:for="{{products}}" wx:key="id">
+      <image class="img" src="{{item.imageUrl}}" data-id="{{item.id}}" bindtap="toDetail" />
+      <view class="name" data-id="{{item.id}}" bindtap="toDetail">{{item.name}}</view>
+      <view class="row">
+        <view class="price">￥{{item.price}}</view>
+        <view class="tag tag-orange">{{activeCategory}}</view>
+      </view>
+      <view class="row qty">
+        <button size="mini" data-id="{{item.id}}" bindtap="decQty">-</button>
+        <text>{{quantities[item.id] || 1}}</text>
+        <button size="mini" data-id="{{item.id}}" bindtap="incQty">+</button>
+        <button class="btn btn-primary" size="mini" data-id="{{item.id}}" bindtap="addToCart">加入购物车</button>
+      </view>
+    </view>
+  </view>
+</view>

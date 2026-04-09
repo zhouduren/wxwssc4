@@ -1,0 +1,42 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 14rpx;
+}
+
+.img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-top: 8rpx;
+}
+
+.price {
+  color: #ff7a45;
+}
+
+.del {
+  color: #999;
+}
+
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 16rpx 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

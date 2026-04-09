@@ -1,0 +1,20 @@
+<view class="container" wx:if="{{detail}}">
+  <view class="card" wx:for="{{detail.items}}" wx:key="id">
+    <view>{{item.productName}}</view>
+    <view class="stars">
+      <text
+        wx:for="{{[1,2,3,4,5]}}"
+        wx:key="*this"
+        wx:for-item="star"
+        class="star {{formMap[item.productId].rating>=star?'on':''}}"
+        data-productid="{{item.productId}}"
+        data-rating="{{star}}"
+        bindtap="onRate"
+      >★</text>
+    </view>
+    <textarea class="ipt" data-productid="{{item.productId}}" bindinput="onInput" placeholder="写下你的评价"></textarea>
+    <button size="mini" data-productid="{{item.productId}}" bindtap="upload">上传图片</button>
+    <view>已选 {{formMap[item.productId].images.length}} 张</view>
+  </view>
+  <button class="btn btn-primary" bindtap="submit">提交评价</button>
+</view>

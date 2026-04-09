@@ -1,0 +1,19 @@
+<view class="container">
+  <scroll-view scroll-x class="tabs">
+    <view wx:for="{{tabs}}" wx:key="*this" class="tab {{active===item?'active':''}}" data-tab="{{item}}" bindtap="switchTab">{{item}}</view>
+  </scroll-view>
+  <view class="card" wx:for="{{list}}" wx:key="id">
+    <view class="row">
+      <view>订单号：{{item.orderNo}}</view>
+      <view class="tag tag-orange">{{item.status}}</view>
+    </view>
+    <view>金额：￥{{item.paidAmount}}</view>
+    <view>下单时间：{{item.createdAt}}</view>
+    <view class="row mt">
+      <button class="btn btn-outline" size="mini" data-id="{{item.id}}" bindtap="toDetail">详情</button>
+      <button class="btn btn-primary" size="mini" wx:if="{{item.status==='待支付'}}" data-id="{{item.id}}" bindtap="pay">支付</button>
+      <button class="btn btn-outline" size="mini" wx:if="{{item.status==='待支付'}}" data-id="{{item.id}}" bindtap="cancel">取消</button>
+      <button class="btn btn-primary" size="mini" wx:if="{{item.status==='已完成'}}" data-id="{{item.id}}" bindtap="review">评价</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+.msg {
+  line-height: 1.8;
+}
+
+.reply {
+  margin-top: 8rpx;
+  background: #fff1e6;
+  padding: 12rpx;
+  border-radius: 10rpx;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 14rpx 20rpx;
+  display: flex;
+  gap: 10rpx;
+}
+
+.ipt {
+  flex: 1;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 0 12rpx;
+  height: 68rpx;
+}

@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card">
+    <view class="user-info">
+      <view class="avatar">{{userInfo.nickname ? userInfo.nickname.substring(0,1) : 'U'}}</view>
+      <view class="info">
+        <view class="name">{{userInfo.nickname}}</view>
+        <view class="row">
+          <view class="tag tag-orange">{{userInfo.dormBuilding}}{{userInfo.dormRoom}}</view>
+          <view class="tag tag-gray">{{userInfo.phone}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <button class="btn btn-primary" bindtap="goOrders">我的订单</button>
+    <button class="btn btn-outline" bindtap="goService">联系客服</button>
+    <button class="btn btn-outline" bindtap="logout">退出登录</button>
+  </view>
+</view>

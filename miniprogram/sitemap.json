@@ -1,0 +1,9 @@
+{
+  "desc": "campus shop sitemap",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

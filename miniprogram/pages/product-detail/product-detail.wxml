@@ -1,0 +1,29 @@
+<view class="container" wx:if="{{product}}">
+  <view class="card">
+    <image class="img" src="{{product.imageUrl}}" />
+    <view class="title">{{product.name}}</view>
+    <view class="price">￥{{product.price}}</view>
+    <view>库存：{{product.stock}}</view>
+    <view class="stepper">
+      <button size="mini" bindtap="stepMinus">-</button>
+      <text>{{quantity}}</text>
+      <button size="mini" bindtap="stepPlus">+</button>
+    </view>
+    <view class="row">
+      <button class="btn btn-primary half" bindtap="addToCart">加入购物车</button>
+      <button class="btn btn-outline half" bindtap="buyNow">立即购买</button>
+    </view>
+  </view>
+  <view class="card">
+    <view class="sub-title">图文详情</view>
+    <rich-text nodes="{{product.detailHtml}}"></rich-text>
+  </view>
+  <view class="card">
+    <view class="sub-title">用户评价</view>
+    <view wx:if="{{!reviews.length}}">暂无评价</view>
+    <view wx:for="{{reviews}}" wx:key="id" class="review-item">
+      <view>{{item.nickname}} · {{item.rating}}分</view>
+      <view>{{item.content}}</view>
+    </view>
+  </view>
+</view>

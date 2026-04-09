@@ -1,0 +1,46 @@
+<view class="container" wx:if="{{stats}}">
+  <view class="card">
+    <view class="title">概览</view>
+    <view class="summary">
+      <view class="sum">
+        <view class="val">￥{{stats.todayIncome}}</view>
+        <view class="lab">今日收入</view>
+      </view>
+      <view class="sum">
+        <view class="val">{{stats.todayOrders}}</view>
+        <view class="lab">今日订单</view>
+      </view>
+      <view class="sum">
+        <view class="val">{{stats.totalProducts}}</view>
+        <view class="lab">商品数</view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="title">热销商品</view>
+    <view wx:for="{{stats.hotProducts}}" wx:key="id" class="hot">
+      <view class="name">{{item.name}}</view>
+      <view class="tag tag-orange">销量 {{item.sales}}</view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="title">近7天销售趋势</view>
+    <view wx:for="{{trend}}" wx:key="day" class="bar">
+      <view class="bar-left">{{item.day}}</view>
+      <view class="bar-right">
+        <view class="bar-fill" style="width: {{item.percent}}%"></view>
+        <view class="bar-val">￥{{item.amount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="card">
+    <view class="title">品类销量占比</view>
+    <view wx:for="{{category}}" wx:key="category" class="bar">
+      <view class="bar-left">{{item.category}}</view>
+      <view class="bar-right">
+        <view class="bar-fill" style="width: {{item.percent}}%"></view>
+        <view class="bar-val">{{item.salesCount}}</view>
+      </view>
+    </view>
+  </view>
+</view>

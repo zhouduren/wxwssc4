@@ -1,0 +1,21 @@
+<view class="container" wx:if="{{detail}}">
+  <view class="card">
+    <view>订单号：{{detail.orderNo}}</view>
+    <view>状态：<text class="tag tag-orange">{{detail.status}}</text></view>
+    <view>配送地址：{{detail.deliveryAddress}}</view>
+    <view>联系人：{{detail.contactName}} {{detail.contactPhone}}</view>
+    <view>配送时间：{{detail.deliveryTime}}</view>
+    <view>备注：{{detail.userRemark || '-'}}</view>
+    <view>下单时间：{{detail.createdAt}}</view>
+    <view>支付时间：{{detail.paidAt || '-'}}</view>
+    <view>送达时间：{{detail.deliveredAt || '-'}}</view>
+  </view>
+  <view class="card">
+    <view class="title">商品明细</view>
+    <view wx:for="{{detail.items}}" wx:key="id" class="line">
+      <view>{{item.productName}} x {{item.quantity}}</view>
+      <view>￥{{item.subtotal}}</view>
+    </view>
+    <view class="total">实付：￥{{detail.paidAmount}}</view>
+  </view>
+</view>

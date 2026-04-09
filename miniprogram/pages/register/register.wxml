@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="card">
+    <view class="title">用户注册</view>
+    <input class="ipt" placeholder="手机号" data-key="phone" bindinput="onInput" />
+    <input class="ipt" placeholder="密码" password data-key="password" bindinput="onInput" />
+    <input class="ipt" placeholder="昵称" data-key="nickname" bindinput="onInput" />
+    <input class="ipt" placeholder="宿舍楼" data-key="dormBuilding" bindinput="onInput" />
+    <input class="ipt" placeholder="宿舍号" data-key="dormRoom" bindinput="onInput" />
+    <button class="btn btn-primary" bindtap="submitRegister">注册</button>
+  </view>
+</view>

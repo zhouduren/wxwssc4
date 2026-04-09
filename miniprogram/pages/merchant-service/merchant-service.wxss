@@ -1,0 +1,14 @@
+.ipt {
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  height: 68rpx;
+  padding: 0 14rpx;
+  margin: 8rpx 0;
+}
+
+.reply {
+  margin-top: 8rpx;
+  background: #fff1e6;
+  padding: 12rpx;
+  border-radius: 10rpx;
+}

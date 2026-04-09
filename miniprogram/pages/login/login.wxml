@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="card">
+    <view class="title">用户登录</view>
+    <input placeholder="手机号" data-key="phone" bindinput="onInput" class="ipt" />
+    <input placeholder="密码" password data-key="password" bindinput="onInput" class="ipt" />
+    <button class="btn btn-primary" bindtap="handleLogin">登录</button>
+    <view class="line-action" bindtap="goRegister">没有账号？去注册</view>
+    <view class="line-action" bindtap="goMerchant">商家入口</view>
+  </view>
+</view>

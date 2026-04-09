@@ -1,0 +1,20 @@
+.ipt {
+  height: 68rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 0 14rpx;
+  margin-bottom: 10rpx;
+}
+
+.picker {
+  height: 68rpx;
+  line-height: 68rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 0 14rpx;
+  margin-bottom: 10rpx;
+}
+
+.mt {
+  margin-top: 10rpx;
+}

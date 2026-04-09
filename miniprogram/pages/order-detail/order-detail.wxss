@@ -1,0 +1,12 @@
+.line {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 0;
+  border-bottom: 1rpx solid #f3f3f3;
+}
+
+.total {
+  margin-top: 14rpx;
+  text-align: right;
+  color: #ff7a45;
+}

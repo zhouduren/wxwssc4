@@ -1,0 +1,30 @@
+<view class="container" wx:if="{{stats}}">
+  <view class="card">
+    <view class="title">商家概览</view>
+    <view class="grid">
+      <view class="stat">
+        <view class="val">￥{{stats.todayIncome}}</view>
+        <view class="lab">今日收入</view>
+      </view>
+      <view class="stat">
+        <view class="val">{{stats.todayOrders}}</view>
+        <view class="lab">今日订单</view>
+      </view>
+      <view class="stat">
+        <view class="val">{{stats.totalProducts}}</view>
+        <view class="lab">商品总数</view>
+      </view>
+      <view class="stat">
+        <view class="val">{{stats.lowStockProducts.length}}</view>
+        <view class="lab">低库存</view>
+      </view>
+    </view>
+  </view>
+  <view class="card menu">
+    <button class="btn btn-primary" bindtap="goProducts">商品管理</button>
+    <button class="btn btn-primary" bindtap="goOrders">订单管理</button>
+    <button class="btn btn-primary" bindtap="goStats">数据统计</button>
+    <button class="btn btn-primary" bindtap="goService">客服回复</button>
+    <button class="btn btn-outline" bindtap="logout">退出登录</button>
+  </view>
+</view>

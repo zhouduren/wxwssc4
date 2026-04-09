@@ -1,0 +1,52 @@
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  width: 200rpx;
+  background: #fff;
+}
+
+.right {
+  flex: 1;
+  padding: 16rpx;
+}
+
+.cate {
+  padding: 24rpx 16rpx;
+  border-left: 6rpx solid transparent;
+}
+
+.active {
+  color: #fa8c16;
+  border-left-color: #fa8c16;
+  background: #fff1e6;
+}
+
+.goods {
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 12rpx;
+  margin-bottom: 14rpx;
+}
+
+.img {
+  width: 100%;
+  height: 220rpx;
+  border-radius: 8rpx;
+}
+
+.name {
+  margin-top: 8rpx;
+}
+
+.price {
+  color: #ff7a45;
+  margin-top: 6rpx;
+}
+
+.qty {
+  margin-top: 12rpx;
+  gap: 14rpx;
+}

@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card">
+    <view class="title">商家登录</view>
+    <input class="ipt" data-key="phone" value="{{phone}}" bindinput="onInput" />
+    <input class="ipt" data-key="password" value="{{password}}" password bindinput="onInput" />
+    <button class="btn-primary" bindtap="login">登录</button>
+    <view class="back" bindtap="backUser">返回用户登录</view>
+  </view>
+</view>

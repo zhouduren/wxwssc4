@@ -1,0 +1,29 @@
+# node
+node_modules/
+.npm-cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+
+# Database (如果包含敏感信息)
+database/*.sql
+database/*.db

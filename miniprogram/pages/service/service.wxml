@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="card msg" wx:for="{{list}}" wx:key="id">
+    <view class="row">
+      <view class="tag tag-gray">我</view>
+      <view>{{item.content}}</view>
+    </view>
+    <view wx:if="{{item.reply}}" class="reply">
+      <view class="tag tag-orange">商家</view>
+      <view>{{item.reply}}</view>
+    </view>
+    <view wx:else>
+      <view class="tag tag-orange">商家</view>
+      <view>待回复</view>
+    </view>
+  </view>
+  <view class="footer">
+    <input class="ipt" placeholder="输入咨询内容" bindinput="onInput" value="{{content}}" />
+    <button size="mini" class="btn btn-primary" bindtap="send">发送</button>
+  </view>
+</view>

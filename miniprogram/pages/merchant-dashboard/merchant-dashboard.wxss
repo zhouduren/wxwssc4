@@ -1,0 +1,27 @@
+.menu button {
+  margin-top: 12rpx;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+
+.stat {
+  width: 48%;
+  background: #fff1e6;
+  border-radius: 12rpx;
+  padding: 16rpx;
+}
+
+.val {
+  font-size: 34rpx;
+  color: #fa8c16;
+  font-weight: 600;
+}
+
+.lab {
+  color: #888;
+  margin-top: 6rpx;
+}

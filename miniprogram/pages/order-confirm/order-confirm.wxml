@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card">
+    <view class="title">配送信息</view>
+    <view>地址：{{userInfo.dormBuilding}}{{userInfo.dormRoom}}</view>
+    <input class="ipt" placeholder="联系人" data-key="contactName" bindinput="onInput" value="{{contactName}}" />
+    <input class="ipt" placeholder="联系电话" data-key="contactPhone" bindinput="onInput" value="{{contactPhone}}" />
+    <input class="ipt" placeholder="配送时间（默认尽快送达）" data-key="deliveryTime" bindinput="onInput" value="{{deliveryTime}}" />
+    <input class="ipt" placeholder="备注" data-key="remark" bindinput="onInput" value="{{remark}}" />
+  </view>
+  <view class="card">
+    <view class="title">商品清单</view>
+    <view wx:for="{{cartList}}" wx:key="id">{{item.name}} x {{item.quantity}} = ￥{{item.price * item.quantity}}</view>
+  </view>
+  <view class="card row">
+    <view>应付：<text class="price">￥{{total}}</text></view>
+    <button class="btn btn-primary" size="mini" bindtap="submitOrder">提交订单</button>
+  </view>
+</view>

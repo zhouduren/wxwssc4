@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="card" wx:for="{{list}}" wx:key="id">
+    <view class="row">
+      <view class="tag tag-gray">用户</view>
+      <view>{{item.nickname}}（{{item.phone}}）</view>
+    </view>
+    <view class="section-title">问题</view>
+    <view>{{item.content}}</view>
+    <view wx:if="{{item.reply}}" class="reply">
+      <view class="section-title">回复</view>
+      <view>{{item.reply}}</view>
+    </view>
+    <view wx:if="{{item.status==='待回复'}}">
+      <input class="ipt" placeholder="输入回复" data-id="{{item.id}}" bindinput="onInput" />
+      <button class="btn btn-primary" size="mini" data-id="{{item.id}}" bindtap="submit">提交回复</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/category/category",
+    "pages/product-detail/product-detail",
+    "pages/cart/cart",
+    "pages/order-confirm/order-confirm",
+    "pages/orders/orders",
+    "pages/order-detail/order-detail",
+    "pages/review/review",
+    "pages/service/service",
+    "pages/profile/profile",
+    "pages/merchant-login/merchant-login",
+    "pages/merchant-dashboard/merchant-dashboard",
+    "pages/merchant-products/merchant-products",
+    "pages/merchant-orders/merchant-orders",
+    "pages/merchant-order-detail/merchant-order-detail",
+    "pages/merchant-stats/merchant-stats",
+    "pages/merchant-service/merchant-service"
+  ],
+  "window": {
+    "navigationBarTitleText": "校园商城",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f5f6f8"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#fa8c16",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/category/category",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "订单"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

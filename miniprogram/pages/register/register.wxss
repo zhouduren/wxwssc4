@@ -1,0 +1,7 @@
+.ipt {
+  height: 78rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 12rpx;
+  padding: 0 20rpx;
+  margin-bottom: 16rpx;
+}

@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="card item" wx:for="{{list}}" wx:key="id">
+    <checkbox checked="{{item.checked}}" bindtap="toggleOne" data-item="{{item}}"></checkbox>
+    <image src="{{item.imageUrl}}" class="img"></image>
+    <view class="flex-1">
+      <view>{{item.name}}</view>
+      <view class="price">￥{{item.price}}</view>
+      <view class="qty">
+        <button size="mini" data-id="{{item.id}}" data-quantity="{{item.quantity}}" data-delta="-1" bindtap="changeQty">-</button>
+        <text>{{item.quantity}}</text>
+        <button size="mini" data-id="{{item.id}}" data-quantity="{{item.quantity}}" data-delta="1" bindtap="changeQty">+</button>
+      </view>
+    </view>
+    <button class="btn btn-outline" size="mini" data-id="{{item.id}}" bindtap="removeItem">删除</button>
+  </view>
+  <view class="bar">
+    <view bindtap="toggleAll">{{allChecked?'取消全选':'全选'}}</view>
+    <view>合计：<text class="price">￥{{total}}</text></view>
+    <button size="mini" class="btn btn-primary" bindtap="toConfirm">结算</button>
+  </view>
+</view>
